@@ -1,0 +1,99 @@
+{
+  "info": {
+    "name": "Testing Environment API",
+    "description": "Postman collection for testing the API server",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["health"]
+        },
+        "description": "Check if the API server is healthy"
+      }
+    },
+    {
+      "name": "Get All Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["users"]
+        },
+        "description": "Retrieve all users"
+      }
+    },
+    {
+      "name": "Get User by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/users?id=1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["users"],
+          "query": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        },
+        "description": "Retrieve a specific user by ID"
+      }
+    },
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Diana\",\n  \"email\": \"diana@example.com\",\n  \"role\": \"User\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["users"]
+        },
+        "description": "Create a new user"
+      }
+    },
+    {
+      "name": "Get Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/status",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["status"]
+        },
+        "description": "Get server status information"
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Environment - Frontend</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Testing Environment Frontend</h1>
+            <p class="subtitle">Validating frontend application functionality</p>
+        </header>
+
+        <main>
+            <section class="test-section">
+                <h2>1. Basic Functionality Test</h2>
+                <div class="test-box">
+                    <input type="text" id="nameInput" placeholder="Enter your name">
+                    <button onclick="testGreeting()">Test Greeting</button>
+                    <p id="greetingOutput" class="output"></p>
+                </div>
+            </section>
+
+            <section class="test-section">
+                <h2>2. API Connectivity Test</h2>
+                <div class="test-box">
+                    <button onclick="testAPI()">Test API Connection</button>
+                    <p id="apiOutput" class="output"></p>
+                </div>
+            </section>
+
+            <section class="test-section">
+                <h2>3. Data Display Test</h2>
+                <div class="test-box">
+                    <button onclick="loadTestData()">Load Test Data</button>
+                    <div id="dataOutput" class="output"></div>
+                </div>
+            </section>
+
+            <section class="test-section">
+                <h2>4. Status Indicators</h2>
+                <div class="status-grid">
+                    <div class="status-card">
+                        <h3>Frontend</h3>
+                        <span class="status-badge success">Active</span>
+                    </div>
+                    <div class="status-card">
+                        <h3>JavaScript</h3>
+                        <span class="status-badge success">Loaded</span>
+                    </div>
+                    <div class="status-card">
+                        <h3>Styles</h3>
+                        <span class="status-badge success">Applied</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Test Environment © 2026 | All systems operational</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
